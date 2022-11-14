@@ -1,6 +1,5 @@
 +++
-title = "contact"
-slug = "contact"
+title = "Contact"
+slug = "Contact"
 +++
 
-Follow me, @johndoe.
