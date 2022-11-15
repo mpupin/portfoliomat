@@ -130,12 +130,12 @@ url = "about/"
 [[languages.fr.menu.main]]
 name = "Projets"
 weight = 3
-url = "Projets/"
+url = "posts/"
 
 [[languages.fr.menu.main]]
-name = "Diplômes"
+name = "Qualifications"
 weight = 2
-url = "Diplômes/"
+url = "qualifications/"
 
 [[languages.fr.menu.main]]
 name = "Me contacter"

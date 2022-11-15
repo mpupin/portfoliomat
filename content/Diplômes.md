@@ -1,5 +1,0 @@
-+++
-title = "Diplômes"
-slug = "Diplômes"
-+++
-
