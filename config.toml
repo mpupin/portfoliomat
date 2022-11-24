@@ -35,7 +35,7 @@ author = "authors"
 [[params.social]]
 name = "Github"
 icon = "fa fa-2x fa-github"
-weight = 1
+weight = 2
 url = "https://github.com/mpupin"
 
 [[params.social]]
@@ -44,11 +44,17 @@ icon = "fa fa-2x fa-linkedin"
 weight = 4
 url = "https://fr.linkedin.com/in/matheo-pupin"
 
+[[params.social]]
+name = "CV"
+icon = "fa fa-2x fa-file-text" 
+weight = 1
+url = "https://mega.nz/file/0CdCHIRD#EVWZrdL8p84jRP-PlfOy3FjKlL6sgMD17R4woklYwOQ"
+
 [languages.fr]
 languageName = ":fr:"
 
 [[languages.fr.menu.main]]
-name = "A propos de moi"
+name = "A propos"
 weight = 4
 url = "about/"
 
@@ -59,7 +65,7 @@ url = "projets/"
 
 [[languages.fr.menu.main]]
 name = "Qualifications"
-weight = 2
+weight = 1
 url = "qualifications/"
 
 [[languages.fr.menu.main]]
@@ -68,6 +74,6 @@ weight = 5
 url = "contact/"
 
 [[languages.fr.menu.main]]
-name = "CV"
-weight = 1
-url = "cv/"
+name = "Stages"
+weight = 2
+url = "stages/"

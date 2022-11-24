@@ -2,40 +2,216 @@
 title = "Contact"
 slug = "Contact"
 +++
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
 
+    /*General */
+    body
+    {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+    
+    #feedback-page{
+        text-align:center;
+    }
+    
+    #form-main{
+        width:100%;
+        float:left;
+        padding-top:0px;
+    }
+    
+    #form-div {
+        background-color:rgba(72,72,72,0.4);
+        padding-left:35px;
+        padding-right:35px;
+        padding-top:35px;
+        padding-bottom:50px;
+        width: 450px;
+        float: left;
+        left: 50%;
+        position: absolute;
+      margin-top:30px;
+        margin-left: -260px;
+      border-radius: 7px;
+      
+    }
+    
+    .montform .feedback-input {
+        color:#3c3c3c;
+        font-family: Helvetica, Arial, sans-serif;
+      font-weight:500;
+        font-size: 18px;
+        border-radius: 0;
+        line-height: 22px;
+        background-color: #fbfbfb;
+        padding: 13px 13px 13px 54px;
+        margin-bottom: 10px;
+        width:100%;
+        box-sizing: border-box;
+        border: 3px solid rgba(0,0,0,0);
+    }
+    /*Inputs styles*/
+    .montform .feedback-input:focus{
+        background: #fff;
+        border: 3px solid #3498db;
+        color: #3498db;
+        outline: none;
+      padding: 13px 13px 13px 54px;
+    }
+    
+    
+    /* Icons ---------------------------------- */
+    .montform  #first_name{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  #first_name:focus{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
+        background-size: 30px 30px;
+        background-position: 8px 5px;
+      background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
 
-<div class="container">
-            <form method="post" action="">
-          
-               <div class="row">
-                <div class="col-md-3">
-                      
-                    </div>
-                    <div class="col-md-6">
-                            <h3>Votre message</h3>
+    .montform  #last_name{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  #last_name:focus{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-address-book.svg);
+        background-size: 30px 30px;
+        background-position: 8px 5px;
+      background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  #email{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-mail.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  #email:focus{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-mail.svg);
+        background-size: 30px 30px;
+      background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
 
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Votre nom *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="email" class="form-control" placeholder="Votre email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control" placeholder="Votre numéro de téléphone *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Votre message *" style="width: 100%; height: 150px;"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="envoyer"value="Envoyer" />
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        
-                    </div>
-                </div>
-            </form>
-</div>
+    .montform  #phone{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbherOAFmMjpCwxbSaH99Q5IRiYhctVkjCOQ&usqp=CAU);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+
+    .montform  #phone:focus{
+        background-size: 30px 30px;
+      background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  #comment{
+        background-image: url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-pencil.svg);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    .montform  textarea {
+        width: 100%;
+        height: 150px;
+        line-height: 150%;
+        resize:vertical;
+    }
+    
+    .montform  input:hover, .montform  textarea:hover,
+    .montform  input:focus, .montform  textarea:focus {
+        background-color:#e6e6e6;
+    }
+    
+    .button-blue{
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        float:left;
+        width: 100%;
+        border: #fbfbfb solid 4px;
+        cursor:pointer;
+        background-color: #464646;
+        color:white;
+        font-size:24px;
+        padding-top:22px;
+        padding-bottom:22px;
+        transition: all 0.3s;
+      margin-top:-4px;
+      font-weight:700;
+    }
+    
+    .button-blue:hover{
+        background-color: rgba(0,0,0,0);
+        color: #6d6d6d;
+    }
+        
+    .montform  .submit:hover {
+        color: #4e4e4e;
+    }
+        
+    .ease {
+        width: 0px;
+        height: 74px;
+        background-color: #fbfbfb;
+        transition: .3s ease;
+    }
+    
+    .submit:hover .ease{
+      width:100%;
+      background-color:white;
+    }
+    
+    /*Styles for small screens*/
+    
+    @media only screen and (max-width: 580px) {
+        #form-div{
+            left: 3%;
+            margin-right: 3%;
+            width: 88%;
+            margin-left: 0;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+    }
+    
+    </style>
+    <div id="form-main">
+      <div id="form-div">
+        <form class="montform" id="reused_form" {{ $enctype }} >
+          <p class="first_name">
+              <input name="first_name" type="text" class="feedback-input" required placeholder="Prénom" id="first_name" />
+          </p>
+          <p class="last_name">
+            <input name="last_name" type="text" class="feedback-input" required placeholder="Nom" id="last_name" />
+        </p>
+          <p class="email">
+            <input name="email" type="email" required  class="feedback-input" id="email" placeholder="Email" />
+          </p>
+          <p class="Phone">
+            <input name="Phone" type="Phone" required  class="feedback-input" id="phone" placeholder="Téléphone" />
+          </p>
+          <p class="text">
+            <textarea name="message" class="feedback-input" id="comment" placeholder="Message"></textarea>
+          </p>
+          <div class="submit">
+            <button type="submit" class="button-blue">Envoyer</button>
+            <div class="ease"></div>
+          </div>
+          <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=xc43rqel&n=n1.ratufa.io"></script>
+        </form>
+        </div>
+    </div>
+   
