@@ -14,7 +14,8 @@ author = "Pupin Mathéo "
 description = "Portfolio Pupin Mathéo "
 keywords = "blog,developer,personal"
 info = ["Etudiant"]
-avatarURL = "images/avatar.jpg"
+avatarURL="images/photo.png"
+
 
 
 rtl = false
@@ -43,12 +44,6 @@ name = "LinkedIn"
 icon = "fa fa-2x fa-linkedin"
 weight = 4
 url = "https://fr.linkedin.com/in/matheo-pupin"
-
-[[params.social]]
-name = "CV"
-icon = "fa fa-2x fa-file-text" 
-weight = 1
-url = "https://mega.nz/file/0CdCHIRD#EVWZrdL8p84jRP-PlfOy3FjKlL6sgMD17R4woklYwOQ"
 
 [languages.fr]
 languageName = ":fr:"

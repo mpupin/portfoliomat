@@ -12,6 +12,8 @@ Le HAProxy disposera d'un équilibrage de charge entre les deux serveurs webs
 
 Ainsi qu'une connexion en HTTPS grâce à un certificat qui nous appartient
 
+**Nous allons configurer le fichier "/etc/haproxy/haproxy.cfg" et mettre cette configuration :**
+```
     frontend http-in
         bind 172.25.40.2:80 --> déclarer l'IP sur laquelle le HAProxy va écouter, c'est-a-dire, définir la porte d'entrée
         mode http
@@ -37,3 +39,4 @@ Ainsi qu'une connexion en HTTPS grâce à un certificat qui nous appartient
         acl pupin1 hdr(host) www.pupintp.tld
         acl pupin2 hdr(host) www.pupintp.tld
         use_backend backend1 if pupin1 or pupin2
+```
