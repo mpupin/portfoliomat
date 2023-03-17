@@ -68,7 +68,3 @@ name = "Me contacter"
 weight = 5
 url = "contact/"
 
-[[languages.fr.menu.main]]
-name = "Stages"
-weight = 2
-url = "stages/"
