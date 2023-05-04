@@ -12,5 +12,4 @@ Je suis actuellement Etudiant en BTS SIO (Service informatique aux organisations
 
 
 
-
-![](pupincv.png)
+<img src="pupincv.png" width="800" />
