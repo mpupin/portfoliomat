@@ -45,6 +45,12 @@ icon = "fa fa-2x fa-linkedin"
 weight = 4
 url = "https://fr.linkedin.com/in/matheo-pupin"
 
+[[params.social]]
+name = "Notes"
+icon = "fa fa-2x fa-book"
+weight = 1
+url = "https://notesobsidian.vercel.app/"
+
 [languages.fr]
 languageName = ":fr:"
 
@@ -64,7 +70,17 @@ weight = 1
 url = "qualifications/"
 
 [[languages.fr.menu.main]]
-name = "Me contacter"
-weight = 5
+name = "Contact"
+weight = 7
 url = "contact/"
+
+[[languages.fr.menu.main]]
+name = "BTS SIO"
+weight = 5
+url = "btssio/"
+
+[[languages.fr.menu.main]]
+name = "Veille Technologique"
+weight = 6
+url = "veille/"
 
