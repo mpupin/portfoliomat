@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pupin Mathéo</title>
+    <link>http://www.example.com/</link>
+    <description>Recent content on Pupin Mathéo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installer wordpress sur une machine Linux</title>
+      <link>http://www.example.com/projets/projet3/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet3/</guid>
+      <description>1ere étape: instalation de WordPress.Link to headingMettez à jour votre machine:
+apt-get update &amp;amp;&amp;amp; apt-get upgrade Positionnez-vous dans le dossier &amp;ldquo;/tmp&amp;rdquo; et téléchargez la dernière version de WordPress :
+cd /tmp wget https://wordpress.org/latest.zip 2ieme étape: création de la base de donnéeLink to heading*Dans ce tuto, j&amp;rsquo;utilise MariaDB, mais vous pouvez aussi le faire avec MySQL, les commandes sont les mêmes.
+Connectez-vous à la console de MariaDB:</description>
+    </item>
+    
+    <item>
+      <title>Créer un DNS sous Linux avec BIND9</title>
+      <link>http://www.example.com/projets/projet1/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet1/</guid>
+      <description>Créer et configurer un serveur DNS sur Linux avec Bind9.
+-Installer Bind9 :
+sudo apt-get install bind9 Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db.</description>
+    </item>
+    
+    <item>
+      <title>HAProxy</title>
+      <link>http://www.example.com/projets/projet2/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet2/</guid>
+      <description>Ici, le HAProxy sera la porte d&amp;rsquo;entrée pour le reséau public vers le réseau privée (les 2 serveurs webs)
+Chacun des 2 serveurs auront une page différentes
+Le HAProxy disposera d&amp;rsquo;un équilibrage de charge entre les deux serveurs webs
+Ainsi qu&amp;rsquo;une connexion en HTTPS grâce à un certificat qui nous appartient
+Nous allons configurer le fichier &amp;ldquo;/etc/haproxy/haproxy.cfg&amp;rdquo; et mettre cette configuration :
+frontend http-in bind 172.25.40.2:80 --&amp;gt; déclarer l&amp;#39;IP sur laquelle le HAProxy va écouter, c&amp;#39;est-a-dire, définir la porte d&amp;#39;entrée mode http option httplog acl pupin1 hdr(host) www.</description>
+    </item>
+    
+    <item>
+      <title>Cybersecurity Essentials</title>
+      <link>http://www.example.com/qualifications/cybersecurity-essentials/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/cybersecurity-essentials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NDG Linux Unhatched</title>
+      <link>http://www.example.com/qualifications/ndg-linux-unhatched/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/ndg-linux-unhatched/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Baccalauréat professionnel</title>
+      <link>http://www.example.com/qualifications/bac/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/bac/</guid>
+      <description>Baccalauréat professionnel systèmes numériques option RISC Lycée Edouard Branly, Amiens, 80000 Mention Assez Bien</description>
+    </item>
+    
+    <item>
+      <title>A propos</title>
+      <link>http://www.example.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/about/</guid>
+      <description>Je suis actuellement Etudiant en BTS SIO (Service informatique aux organisations), ayant réalisé un BAC Pro SN (systemes numériques) option C RISC (Réseau informatique et systemes communicants) j&amp;rsquo;ai choisi l&amp;rsquo;option SISR (Solutions d&amp;rsquo;infrastructure, systèmes et réseaux) en BTS pour pouvoir poursuivre mes études dans le réseau informatique.
+test</description>
+    </item>
+    
+    <item>
+      <title>BTS SIO</title>
+      <link>http://www.example.com/btssio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/btssio/</guid>
+      <description>Le BTS SIO (Brevet de Technicien Supérieur - Services Informatiques aux Organisations) est un diplôme reconnu par l&amp;rsquo;État de niveau BAC+2. Ce diplôme propose deux spécialités : le BTS SIO SISR et le BTS SIO SLAM. Cette formation propose avec un enseignement théorique (les cours) mais aussi professionnel avec deux stages.
+L&amp;rsquo;option SISRLink to headingL’option Solutions d’Infrastructure, Systèmes et Réseaux forme des professionnels des réseaux et équipements informatiques (installation, maintenance, sécurité).</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://www.example.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/contact/</guid>
+      <description>Envoyer</description>
+    </item>
+    
+    <item>
+      <title>Veille</title>
+      <link>http://www.example.com/veille/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/veille/</guid>
+      <description>Le téléviseur de la marque DisplaceLink to headingEn effet, Displace a présenté au CES 2023 une télévision sans fil, sans ports, sans fixation murale, légère, sans télécommande.
+Pourquoi ce choix de sujet ?Link to headingJ&amp;rsquo;ai choisi ce sujet car la télévision est maintenant un objet de notre quotidien, tout le monde connaît la télévision et son utilité.
+L&amp;rsquo;évolution du téléviseurLink to headingLa télévision mécanique En 1923, un inventeur américain nommé Charles Jenkins a utilisé l’idée du disque de Nipkow pour inventer le premier système pratique de télévision mécanique</description>
+    </item>
+    
+  </channel>
+</rss>

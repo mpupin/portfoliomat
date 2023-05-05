@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qualifications on Pupin Mathéo</title>
+    <link>http://www.example.com/qualifications/</link>
+    <description>Recent content in Qualifications on Pupin Mathéo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/qualifications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cybersecurity Essentials</title>
+      <link>http://www.example.com/qualifications/cybersecurity-essentials/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/cybersecurity-essentials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NDG Linux Unhatched</title>
+      <link>http://www.example.com/qualifications/ndg-linux-unhatched/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/ndg-linux-unhatched/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Baccalauréat professionnel</title>
+      <link>http://www.example.com/qualifications/bac/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/qualifications/bac/</guid>
+      <description>Baccalauréat professionnel systèmes numériques option RISC Lycée Edouard Branly, Amiens, 80000 Mention Assez Bien</description>
+    </item>
+    
+  </channel>
+</rss>

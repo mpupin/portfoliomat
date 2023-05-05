@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>
+  Créer un DNS sous Linux avec BIND9 · Pupin Mathéo
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Pupin Mathéo ">
+<meta name="description" content="Créer et configurer un serveur DNS sur Linux avec Bind9.
+-Installer Bind9 :
+sudo apt-get install bind9 Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .
+include &#34;/etc/bind/named.conf.options&#34;; include &#34;/etc/bind/named.conf.local&#34;; include &#34;/etc/bind/named.conf.default-zones&#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :
+zone &#34;example.com&#34; { type master; file &#34;/etc/bind/db.example.com&#34;; }; → On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Créer un DNS sous Linux avec BIND9"/>
+<meta name="twitter:description" content="Créer et configurer un serveur DNS sur Linux avec Bind9.
+-Installer Bind9 :
+sudo apt-get install bind9 Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .
+include &#34;/etc/bind/named.conf.options&#34;; include &#34;/etc/bind/named.conf.local&#34;; include &#34;/etc/bind/named.conf.default-zones&#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :
+zone &#34;example.com&#34; { type master; file &#34;/etc/bind/db.example.com&#34;; }; → On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db."/>
+
+<meta property="og:title" content="Créer un DNS sous Linux avec BIND9" />
+<meta property="og:description" content="Créer et configurer un serveur DNS sur Linux avec Bind9.
+-Installer Bind9 :
+sudo apt-get install bind9 Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .
+include &#34;/etc/bind/named.conf.options&#34;; include &#34;/etc/bind/named.conf.local&#34;; include &#34;/etc/bind/named.conf.default-zones&#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :
+zone &#34;example.com&#34; { type master; file &#34;/etc/bind/db.example.com&#34;; }; → On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.example.com/projets/projet1/" /><meta property="article:section" content="projets" />
+<meta property="article:published_time" content="2022-11-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-14T00:00:00+00:00" />
+
+
+
+
+<link rel="canonical" href="http://www.example.com/projets/projet1/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.c4d7e93a158eda5a65b3df343745d2092a0a1e2170feeec909b8a89443903c6a.css" integrity="sha256-xNfpOhWO2lpls980N0XSCSoKHiFw/u7JCbiolEOQPGo=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.78b5fe3864945faf5207fb8fe3ab2320d49c3365def0e88ac1df0ddadc54a03c.css" integrity="sha256-eLX&#43;OGSUX69SB/uP46sjINScM2Xe8OiKwd8N2txUoDw=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3">
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Pupin Mathéo
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/qualifications/">Qualifications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projets/">Projets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">A propos</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/btssio/">BTS SIO</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/veille/">Veille Technologique</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://www.example.com/projets/projet1/">
+          Créer un DNS sous Linux avec BIND9
+        </a>
+      </h1>
+    </header>
+
+    <p>Créer et configurer un serveur DNS sur Linux avec Bind9.</p>
+<p><em><strong>-Installer Bind9 :</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt-get install bind9
+</span></span></code></pre></div><p><strong>Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>include &#34;/etc/bind/named.conf.options&#34;;
+</span></span><span style="display:flex;"><span>include &#34;/etc/bind/named.conf.local&#34;;
+</span></span><span style="display:flex;"><span>include &#34;/etc/bind/named.conf.default-zones&#34;;
+</span></span></code></pre></div><p><strong>-Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>zone &#34;example.com&#34; {
+</span></span><span style="display:flex;"><span>        type master;
+</span></span><span style="display:flex;"><span>        file &#34;/etc/bind/db.example.com&#34;;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>→ On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db.example.com »</p>
+<p><strong>Dans db.example.com ; configurer sa zone (l’IP de mon serveur DNS est 192.168.1.15 ):</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dns" data-lang="dns"><span style="display:flex;"><span>$TTL    <span style="font-style:italic">604800</span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">@</span>       <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">SOA</span>     example.com. root.example.com. (
+</span></span><span style="display:flex;"><span>                              <span style="font-style:italic">2</span>         <span style="font-style:italic">; Serial</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                         <span style="font-style:italic">604800</span>         <span style="font-style:italic">; Refresh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                          <span style="font-style:italic">86400</span>         <span style="font-style:italic">; Retry</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="font-style:italic">2419200</span>         <span style="font-style:italic">; Expire</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                         <span style="font-style:italic">604800</span> )       <span style="font-style:italic">; Negative Cache TTL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">A</span>       192.168.1.15
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">@</span>       <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">NS</span>      ns.example.com.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">ns</span>      <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">A</span>         192.168.1.15
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">serv1</span>   <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">A</span>       192.168.1.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">serv2</span>   <span style="font-weight:bold">IN</span>      <span style="font-weight:bold">A</span>       192.168.1.2
+</span></span></code></pre></div><p>Le premier paragraphe correspond à l’enregistrement SOA, on peut le laisser tel quel.</p>
+<p>Dans le deuxième paragraphe, on va donner des informations à notre serveur DNS, c’est-à-dire , que nous allons entrer manuellement des noms de machines et leurs IP utiles à mon serveur.</p>
+<p><strong>⚠ Il est fortement recommandé de faire l’enregistrement NS, c’est la norme.</strong></p>
+<p>Premièrement, j’ai donné à mon serveur DNS les IP des autres serveurs DNS du domaine example.com (c’est  l’enregistrement NS). Malgré le fait qu’il n’y en ai qu’un seul (mon serveur DNS), je le met quand même.</p>
+<p>Ensuite, j’ai déclaré 2 serveurs web, serv1 et serv2.
+Je rappelle qu’il faudra adapter cette configuration en fonction de ces besoins, cette configuration n’est qu’un exemple.</p>
+<p><strong>Si notre serveur DNS n’est pas capable de résoudre certains nom de domaine, il faut qu’il envoie ses requêtes à d’autres DNS qui pourront le faire. Ces serveurs s’appellent des « forwarders ». On doit les indiquer dans le fichier « named.conf.options ».</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    forwarders {
+</span></span><span style="display:flex;"><span>        8.8.8.8;
+</span></span><span style="display:flex;"><span>        172.25.254.15 ;
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Pupin Mathéo  
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js" integrity="sha256-I2BJOV3DaC&#43;ycZZAhylY4S8fJAZ7sJwyeyM&#43;YpDH7aw="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

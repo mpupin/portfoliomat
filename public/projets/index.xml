@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projets on Pupin Mathéo</title>
+    <link>http://www.example.com/projets/</link>
+    <description>Recent content in Projets on Pupin Mathéo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/projets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installer wordpress sur une machine Linux</title>
+      <link>http://www.example.com/projets/projet3/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet3/</guid>
+      <description>1ere étape: instalation de WordPress.Link to headingMettez à jour votre machine:
+apt-get update &amp;amp;&amp;amp; apt-get upgrade Positionnez-vous dans le dossier &amp;ldquo;/tmp&amp;rdquo; et téléchargez la dernière version de WordPress :
+cd /tmp wget https://wordpress.org/latest.zip 2ieme étape: création de la base de donnéeLink to heading*Dans ce tuto, j&amp;rsquo;utilise MariaDB, mais vous pouvez aussi le faire avec MySQL, les commandes sont les mêmes.
+Connectez-vous à la console de MariaDB:</description>
+    </item>
+    
+    <item>
+      <title>Créer un DNS sous Linux avec BIND9</title>
+      <link>http://www.example.com/projets/projet1/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet1/</guid>
+      <description>Créer et configurer un serveur DNS sur Linux avec Bind9.
+-Installer Bind9 :
+sudo apt-get install bind9 Tout d’abord, nous mettons ces 3 lignes dans le fichier named.conf .
+include &amp;#34;/etc/bind/named.conf.options&amp;#34;; include &amp;#34;/etc/bind/named.conf.local&amp;#34;; include &amp;#34;/etc/bind/named.conf.default-zones&amp;#34;; -Dans le fichier de configuration de bind9 « named.conf.local », déclarer ces zones :
+zone &amp;#34;example.com&amp;#34; { type master; file &amp;#34;/etc/bind/db.example.com&amp;#34;; }; → On vient ici de dire que la configuration de notre zone example.com se fera dans le fichier « db.</description>
+    </item>
+    
+    <item>
+      <title>HAProxy</title>
+      <link>http://www.example.com/projets/projet2/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet2/</guid>
+      <description>Ici, le HAProxy sera la porte d&amp;rsquo;entrée pour le reséau public vers le réseau privée (les 2 serveurs webs)
+Chacun des 2 serveurs auront une page différentes
+Le HAProxy disposera d&amp;rsquo;un équilibrage de charge entre les deux serveurs webs
+Ainsi qu&amp;rsquo;une connexion en HTTPS grâce à un certificat qui nous appartient
+Nous allons configurer le fichier &amp;ldquo;/etc/haproxy/haproxy.cfg&amp;rdquo; et mettre cette configuration :
+frontend http-in bind 172.25.40.2:80 --&amp;gt; déclarer l&amp;#39;IP sur laquelle le HAProxy va écouter, c&amp;#39;est-a-dire, définir la porte d&amp;#39;entrée mode http option httplog acl pupin1 hdr(host) www.</description>
+    </item>
+    
+  </channel>
+</rss>
