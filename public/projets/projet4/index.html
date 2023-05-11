@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>
+  Créer un serveur DHCP sous Linux · Pupin Mathéo
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Pupin Mathéo ">
+<meta name="description" content="Installer le paquetLink to headingapt install isc-dhcp-server
+Ouvrir le fichier de configurationLink to headingnano /etc/dhcp/dhcpd.conf
+Ajout de l&rsquo;attributaionLink to headingsubnet 172.16.0.0 netmask 255.255.0.0 {
+rang d&rsquo;attribution (100 machines)Link to headingrange 172.16.100.101 172.16.100.200;
+masque de sous-réseauLink to headingoption subnet-mask 255.255.0.0;
+broadcast pour les informations généralesLink to headingoption broadcast-address 172.16.100.255;
+adresse ip du routeurLink to headingoption routers 172.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Créer un serveur DHCP sous Linux"/>
+<meta name="twitter:description" content="Installer le paquetLink to headingapt install isc-dhcp-server
+Ouvrir le fichier de configurationLink to headingnano /etc/dhcp/dhcpd.conf
+Ajout de l&rsquo;attributaionLink to headingsubnet 172.16.0.0 netmask 255.255.0.0 {
+rang d&rsquo;attribution (100 machines)Link to headingrange 172.16.100.101 172.16.100.200;
+masque de sous-réseauLink to headingoption subnet-mask 255.255.0.0;
+broadcast pour les informations généralesLink to headingoption broadcast-address 172.16.100.255;
+adresse ip du routeurLink to headingoption routers 172."/>
+
+<meta property="og:title" content="Créer un serveur DHCP sous Linux" />
+<meta property="og:description" content="Installer le paquetLink to headingapt install isc-dhcp-server
+Ouvrir le fichier de configurationLink to headingnano /etc/dhcp/dhcpd.conf
+Ajout de l&rsquo;attributaionLink to headingsubnet 172.16.0.0 netmask 255.255.0.0 {
+rang d&rsquo;attribution (100 machines)Link to headingrange 172.16.100.101 172.16.100.200;
+masque de sous-réseauLink to headingoption subnet-mask 255.255.0.0;
+broadcast pour les informations généralesLink to headingoption broadcast-address 172.16.100.255;
+adresse ip du routeurLink to headingoption routers 172." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.example.com/projets/projet4/" /><meta property="article:section" content="projets" />
+<meta property="article:published_time" content="2023-01-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-11T00:00:00+00:00" />
+
+
+
+
+<link rel="canonical" href="http://www.example.com/projets/projet4/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.c4d7e93a158eda5a65b3df343745d2092a0a1e2170feeec909b8a89443903c6a.css" integrity="sha256-xNfpOhWO2lpls980N0XSCSoKHiFw/u7JCbiolEOQPGo=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.78b5fe3864945faf5207fb8fe3ab2320d49c3365def0e88ac1df0ddadc54a03c.css" integrity="sha256-eLX&#43;OGSUX69SB/uP46sjINScM2Xe8OiKwd8N2txUoDw=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3">
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Pupin Mathéo
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/qualifications/">Qualifications</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projets/">Projets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">A propos</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/btssio/">BTS SIO</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/veille/">Veille Technologique</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://www.example.com/projets/projet4/">
+          Créer un serveur DHCP sous Linux
+        </a>
+      </h1>
+    </header>
+
+    <h3 id="installer-le-paquet">
+  Installer le paquet
+  <a class="heading-link" href="#installer-le-paquet">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>apt install isc-dhcp-server</p>
+<h3 id="ouvrir-le-fichier-de-configuration">
+  Ouvrir le fichier de configuration
+  <a class="heading-link" href="#ouvrir-le-fichier-de-configuration">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>nano /etc/dhcp/dhcpd.conf</p>
+<h3 id="ajout-de-lattributaion">
+  Ajout de l&rsquo;attributaion
+  <a class="heading-link" href="#ajout-de-lattributaion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>subnet 172.16.0.0 netmask 255.255.0.0 {</p>
+<h3 id="rang-dattribution-100-machines">
+  rang d&rsquo;attribution (100 machines)
+  <a class="heading-link" href="#rang-dattribution-100-machines">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>range 172.16.100.101 172.16.100.200;</p>
+<h3 id="masque-de-sous-réseau">
+  masque de sous-réseau
+  <a class="heading-link" href="#masque-de-sous-r%c3%a9seau">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>option subnet-mask 255.255.0.0;</p>
+<h3 id="broadcast-pour-les-informations-générales">
+  broadcast pour les informations générales
+  <a class="heading-link" href="#broadcast-pour-les-informations-g%c3%a9n%c3%a9rales">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>option broadcast-address 172.16.100.255;</p>
+<h3 id="adresse-ip-du-routeur">
+  adresse ip du routeur
+  <a class="heading-link" href="#adresse-ip-du-routeur">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>option routers 172.16.100.254;</p>
+<h3 id="serveur-dns">
+  Serveur DNS
+  <a class="heading-link" href="#serveur-dns">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>option domain-name-servers 172.25.254.12, 172.25.254.15;
+}</p>
+<h3 id="ajouter-le-subnet-de-notre-serveur-sinon-il-affichera-une-erreur">
+  Ajouter le subnet de notre serveur sinon il affichera une erreur
+  <a class="heading-link" href="#ajouter-le-subnet-de-notre-serveur-sinon-il-affichera-une-erreur">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>subnet 10.0.100.0 netmask 255.255.255.0 {</p>
+<p>option subnet-mask 255.255.255.0;</p>
+<p>option routers 10.0.100.254;
+}</p>
+<p>nano /etc/default/isc/default/isc-dhcp-server</p>
+<p>INTERFACESv4=&ldquo;eth0&rdquo;</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Pupin Mathéo  
+    ·
+    
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js" integrity="sha256-I2BJOV3DaC&#43;ycZZAhylY4S8fJAZ7sJwyeyM&#43;YpDH7aw="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -6,7 +6,42 @@
     <description>Recent content on Pupin Mathéo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Créer un serveur NTP sous Linux</title>
+      <link>http://www.example.com/projets/projet6/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet6/</guid>
+      <description>Installer un serveur NTP
+Sur une machine Debian 10 installer un serveur NTPLink to headingInstaller le package chronyLink to headingsudo -s apt install chrony A partir de ce moment la on doit vérifier le contenu de &amp;ldquo;chrony.conf&amp;rdquo;Link to headingnano /etc/chrony/chrony.conf Ensuite nous devons déclarer nos pool NTP donc nous allons nous rendre à la ligne 3 pour faire ajouter ces modification :Link to headingpool 2.</description>
+    </item>
+    
+    <item>
+      <title>Créer un serveur téléphonique sur Linux</title>
+      <link>http://www.example.com/projets/projet5/</link>
+      <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet5/</guid>
+      <description>Installer le paquetLink to headingapt install asterisk
+Configuration de base extensions.confLink to heading[general] static = yes writeprotect = yes clearglobalvars = yes Configuration de base users.confLink to heading[general] hasvoicemail = yes hassip = yes [template] type = friend host = dynamic dtmfmode = rfc2833 isallow = all allow = ulaw allow = alaw Configuration de base voicemail.confLink to heading[general] maxmsg = 100 maxsecs = 0 minsecs = 0 maxlogins = 3 review = no saycid = no Aller plus loin !</description>
+    </item>
+    
+    <item>
+      <title>Créer un serveur DHCP sous Linux</title>
+      <link>http://www.example.com/projets/projet4/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/projets/projet4/</guid>
+      <description>Installer le paquetLink to headingapt install isc-dhcp-server
+Ouvrir le fichier de configurationLink to headingnano /etc/dhcp/dhcpd.conf
+Ajout de l&amp;rsquo;attributaionLink to headingsubnet 172.16.0.0 netmask 255.255.0.0 {
+rang d&amp;rsquo;attribution (100 machines)Link to headingrange 172.16.100.101 172.16.100.200;
+masque de sous-réseauLink to headingoption subnet-mask 255.255.0.0;
+broadcast pour les informations généralesLink to headingoption broadcast-address 172.16.100.255;
+adresse ip du routeurLink to headingoption routers 172.</description>
+    </item>
+    
     <item>
       <title>Installer wordpress sur une machine Linux</title>
       <link>http://www.example.com/projets/projet3/</link>
@@ -79,8 +114,7 @@ frontend http-in bind 172.25.40.2:80 --&amp;gt; déclarer l&amp;#39;IP sur laque
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.example.com/about/</guid>
-      <description>Je suis actuellement Etudiant en BTS SIO (Service informatique aux organisations), ayant réalisé un BAC Pro SN (systemes numériques) option C RISC (Réseau informatique et systemes communicants) j&amp;rsquo;ai choisi l&amp;rsquo;option SISR (Solutions d&amp;rsquo;infrastructure, systèmes et réseaux) en BTS pour pouvoir poursuivre mes études dans le réseau informatique.
-test</description>
+      <description>Je suis actuellement Etudiant en BTS SIO (Service informatique aux organisations), ayant réalisé un BAC Pro SN (systemes numériques) option C RISC (Réseau informatique et systemes communicants) j&amp;rsquo;ai choisi l&amp;rsquo;option SISR (Solutions d&amp;rsquo;infrastructure, systèmes et réseaux) en BTS pour pouvoir poursuivre mes études dans le réseau informatique.</description>
     </item>
     
     <item>
